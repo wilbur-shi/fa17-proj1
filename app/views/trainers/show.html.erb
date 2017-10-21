@@ -6,5 +6,6 @@
 <% @trainer.pokemons.each do |p| %>
 	Name: <%= p.name %> </br>
 	Level: <%= p.level %> </br>
+	Health: <%= p.health %> <%= button_to "Damage!", damage_path(id: p), :class => "button small", :method => :patch %> </br>
 </br>
 <% end %>
